@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocalVision | AI Speech to Image</title>
+    <meta name="description" content="Generate stunning AI images using only your voice. Live transcription and instant image generation powered by Web Speech API and Pollinations.ai.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>VocalVision</h1>
+            <p class="subtitle">Speak your imagination into reality</p>
+        </header>
+
+        <main class="main-card">
+            <!-- Voice Section -->
+            <div class="voice-section">
+                <button id="recordBtn" class="record-btn" aria-label="Start Recording">
+                    <i id="micIcon" class="fas fa-microphone"></i>
+                </button>
+                <div id="statusText" class="status-text">Click to start speaking</div>
+                <div id="liveIndicator" class="live-indicator hidden">
+                    <span class="live-dot"></span> LIVE
+                </div>
+            </div>
+
+            <!-- Live Transcription -->
+            <div id="transcriptionBox" class="transcription-area">
+                <span class="placeholder-text">Your spoken prompt will appear here...</span>
+            </div>
+
+            <!-- Generate Button -->
+            <button id="generateBtn" class="generate-btn hidden" aria-label="Generate Image">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                <span>Generate Image</span>
+            </button>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-section hidden">
+                <div class="loader"></div>
+                <p class="loading-text">AI is imagining your request...</p>
+            </div>
+
+            <!-- Result Section -->
+            <div id="resultSection" class="result-section hidden">
+                <div class="image-container">
+                    <img id="generatedImage" alt="AI generated artwork">
+                </div>
+                <div class="action-buttons">
+                    <button id="downloadBtn" class="action-btn" title="Download">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button id="shareBtn" class="action-btn action-btn-secondary" title="Share">
+                        <i class="fas fa-share-nodes"></i>
+                    </button>
+                    <button id="newBtn" class="action-btn action-btn-secondary" title="New Creation">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Unsupported browser warning -->
+            <div id="unsupportedWarning" class="unsupported-warning hidden">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Your browser doesn't support the Web Speech API. Please use <strong>Chrome</strong> or <strong>Edge</strong> for voice recognition.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by <strong>Web Speech API</strong> & <strong>Pollinations.ai</strong> — No API keys needed</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
