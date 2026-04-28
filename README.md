@@ -1,10 +1,6 @@
 # 🎙️ VocalVision — Speak Your Imagination Into Reality
 
 <p align="center">
-  <img src="demo_screenshot.png" alt="VocalVision Demo" width="800"/>
-</p>
-
-<p align="center">
   <b>VocalVision</b> is a full-stack AI application that turns your voice into stunning AI-generated images.<br/>
   Speak in <b>any language</b> — VocalVision transcribes, translates, and visualizes your words instantly.
 </p>
