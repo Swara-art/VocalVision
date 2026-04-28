@@ -38,9 +38,6 @@
 
 ## 🗂️ Project Structure
 
-<p align="center">
-  <img src="folder_structure.png" alt="Folder Structure" width="300"/>
-</p>
 
 ```
 speech-image/
